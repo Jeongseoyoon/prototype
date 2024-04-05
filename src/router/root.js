@@ -9,7 +9,11 @@ const Loading = <Spinner animation="border"size="xl" variant="primary"/>
 
 const root = createBrowserRouter ([
 	{
-		path:"",
+		path:"admin",
+		element: <Suspense fallback={Loading}><StartPages></StartPages></Suspense>
+	},
+	{
+		path:"schedule",
 		element: <Suspense fallback={Loading}><StartPages></StartPages></Suspense>
 	},
 ])
