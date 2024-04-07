@@ -1,11 +1,10 @@
-@import "~bootstrap/scss/_variables";
+// 사용자 정의 변수를 정의
+$primary: #eeeeee; // 예시로 primary 색상을 빨간색으로 변경
 
-// Bootstrap 변수를 불러와서 오버라이드
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
+$theme-colors: (
+  "primary": $primary,
+  // 나머지 필요한 변수들도 같은 방식으로 정의해줍니다.
+);
 
-// 사용자 정의 변수를 재정의
-$primary: #ff0000; // 예시로 primary 색상을 빨간색으로 변경
 
-// 나머지 Bootstrap 스타일 파일을 불러옴
-@import "~bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

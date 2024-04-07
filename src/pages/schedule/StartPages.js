@@ -1,4 +1,4 @@
-import { Button } from 'bootstrap';
+import { Button } from 'react-bootstrap';
 import React from 'react';
 
 function StartPages(props) {
@@ -6,6 +6,7 @@ function StartPages(props) {
     <div>
       <div>시작하기
       <Button variant="primary">My Button</Button>
+      <Button variant="secondary">Secondary</Button>
       </div>
     </div>
   );

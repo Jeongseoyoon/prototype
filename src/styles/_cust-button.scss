@@ -1,0 +1,16 @@
+@import "../../node_modules/bootstrap/scss/buttons";
+
+// 기본 버튼 스타일
+.btn {
+  // 버튼 스타일 정의
+  background-color: $primary; // 기본 배경색은 primary 변수의 색상으로 설정
+  
+  &:hover {
+      background-color: darken($primary, 40%); // 호버 시 primary 변수의 색상에서 조금 어둡게 설정
+  }
+}
+
+// btn-primary 버튼의 hover 색상을 20% 밝게 설정
+.btn-primary:hover {
+  background-color: lighten($primary, 20%);
+}
