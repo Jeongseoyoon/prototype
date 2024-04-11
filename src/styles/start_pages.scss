@@ -1,0 +1,12 @@
+.start-container {
+  > .title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .txt {
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 1.4rem;
+  }
+}

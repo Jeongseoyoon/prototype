@@ -1,13 +1,13 @@
 import React from 'react';
 import BasicMenu from '../components/menus/BasicMenu';
 
-function SubLayout(props) {
+function SubLayout({children}) {
   return (
     <div>
       <BasicMenu></BasicMenu>
-      <div className='container'>
-        <div>
-          
+      <div className='sub-container'>
+        <div className='content'>
+          {children}
         </div>
       </div>
     </div>

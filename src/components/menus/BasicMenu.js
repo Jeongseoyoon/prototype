@@ -1,39 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
+
+const options = [
+  { value: 'EN', label: 'EN' },
+  { value: 'KR', label: 'KR' },
+];
 
 function BasicMenu(props) {
+  const defaultValue = options.find(option => option.value === 'KR');
+  const [selectedOption, setSelectedOption] = useState(null);
+
   return (
     <header>
-      <div className='inner'>
-        <div className='header-wrap'>
-          <div className=''>
-            <Link to={'/'} className=''>
-                <img src="images/logo.png" alt="Logo"/>
-            </Link> 
-          </div>
-            <nav className='gnb'>
-              <ul className="">
-                <li className=""> 
-                    <Link to={'/'} className=''>IGS 소개</Link> 
-                </li>
-                <li className=""> 
-                    <Link to={'/about'} className=''>IGS 요금제</Link> 
-                </li>
-                <li className=""> 
-                    <Link to={'/todo'}>스케쥴 등록</Link> 
-                </li>
-                <li className=""> 
-                    <Link to={'/board'}>고객센터</Link> 
-                </li>
-              </ul>
-            </nav>
-          <div className='flex gap-1'>
-            <Link to={'/login'}>Login</Link> 
-            <Link to={'/join'}>Join</Link> 
-          </div>
+      <div className='header-logo'>
+        <Link to={'/schedule/start'} className=''>
+            <img src="images/logo.svg" alt="Logo"/>
+        </Link> 
+      </div>
+      <nav className='gnb'>
+        <ul className="">
+          <li className=""> 
+            <Link to={'/'} className=''>About IGS</Link> 
+          </li>
+          <li className=""> 
+            <Link to={'/'} className=''>Pricing</Link> 
+          </li>
+          <li className=""> 
+            <Link to={'/schedule/start'}>Schedule</Link> 
+          </li>
+          <li className=""> 
+            <Link to={'/'}>Support</Link> 
+          </li>
+        </ul>
+      </nav>
+
+      <div className='header-nav-items'>
+        <Select
+          defaultValue={defaultValue}
+          onChange={setSelectedOption}
+          options={options}
+        />
+        <div className=''>
+          Login
         </div>
       </div>
-</header>
+    </header>
   );
 }
 

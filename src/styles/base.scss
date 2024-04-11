@@ -1,3 +1,76 @@
+// Pretendard
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url('../assets/fonts/Pretendard/woff2/Pretendard-Black.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Black.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url('../assets/fonts/Pretendard/woff2/Pretendard-ExtraBold.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('../assets/fonts/Pretendard/woff2/Pretendard-Bold.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url('../assets/fonts/Pretendard/woff2/Pretendard-SemiBold.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url('../assets/fonts/Pretendard/woff2/Pretendard-Medium.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url('../assets/fonts/Pretendard/woff2/Pretendard-Regular.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url('../assets/fonts/Pretendard/woff2/Pretendard-Light.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url('../assets/fonts/Pretendard/woff2/Pretendard-ExtraLight.woff2') format('woff2'),
+   url('../assets/fonts/Pretendard/woff/Pretendard-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url('../assets/fonts/Pretendard/woff2/Pretendard-Thin.woff2') format('woff2'), 
+  url('../assets/fonts/Pretendard/woff/Pretendard-Thin.woff') format('woff');
+}
+
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
@@ -53,4 +126,57 @@
   src: url('../assets/fonts/NotoSansKR-WEB/NotoSansKR-Black.woff2') format('woff2'),
     url('../assets/fonts/NotoSansKR-WEB/NotoSansKR-Black.woff') format('woff'),
     url('../assets/fonts/NotoSansKR-WEB/NotoSansKR-Black.otf') format('opentype');
+}
+
+:root {
+  --header-top-height: 6.2rem;
+  --content-default-bg: #eceff5;
+  --bs-font-title: 'Pretendard', 'Noto Sans KR', "Roboto", 'NanumBarunGothic', dotum, '돋움', helvetica, WebComponentsIcons, sans-serif;
+
+  // color
+  --blue-color:#0057FF;
+  --sky-color: #00A3FF;
+  --black-color:#000000;
+  --gray-color:#00000099;
+  --orange-color: #FF7A00;
+}
+html {
+   /* font-size: 62.5%; font-size 1em = 10px 브라우저의 기본 설정 */
+  font-size: 10px;
+  // line-height: 10px;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, p, blockquote, pre, code, address, ul, ol, li, menu, nav, section, article, aside, dl, dt, dd, table, thead, tbody, tfoot, label, caption, th, td, form, fieldset, legend, hr, input, button, textarea, object, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+body, html { 
+  height: 100%;
+  width: 100%; 
+}
+
+body {
+  padding-right: 0!important;
+  padding-left: 0!important;
+  overflow-x: hidden;
+  font-family: var(--bs-font-title);
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-family: var(--bs-font-title);
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+li { list-style-type : none }
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+main, section, nav, footer, aside, article, figure {
+  display: block;
 }
